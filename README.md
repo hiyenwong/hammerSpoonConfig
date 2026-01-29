@@ -85,12 +85,12 @@ config.japaneseKeyboard = {
 
 | 快捷键 | 功能 |
 |--------|------|
-| `Cmd+Alt+←` | 左半屏 |
-| `Cmd+Alt+→` | 右半屏 |
-| `Cmd+Alt+↑` | 上半屏 |
-| `Cmd+Alt+↓` | 下半屏 |
-| `Cmd+Alt+F` | 全屏 |
-| `Cmd+Alt+C` | 居中 |
+| `Cmd+Ctrl+H` | 左半屏 |
+| `Cmd+Ctrl+L` | 右半屏 |
+| `Cmd+Ctrl+J` | 上半屏 |
+| `Cmd+Ctrl+K` | 下半屏 |
+| `Cmd+Ctrl+F` | 全屏 |
+| `Cmd+Ctrl+C` | 居中 |
 
 > **💡 提示**: 请在普通应用窗口(如 VSCode、Chrome、Finder)上测试窗口管理功能。Hammerspoon Console 窗口可能有特殊限制,无法被调整大小。
 
@@ -142,6 +142,10 @@ defaults read ~/Library/Preferences/com.apple.HIToolbox.plist AppleEnabledInputS
 1. **日语键盘用户**: 充分利用「英数」和「かな」键的重映射功能
 2. **多语言环境**: 配置好输入法自动切换,提高效率
 3. **自定义扩展**: 在 `apps/` 目录为常用应用添加专属配置
+
+## 📄 开源协议
+
+本项目采用 [MIT License](LICENSE) 开源协议。
 
 ---
 
