@@ -16,17 +16,28 @@ local function applicationWatcher(appName, eventType, appObject)
     if eventType ~= hs.application.watcher.activated then
         return
     end
+
+    local currentSource = hs.keycodes.currentSourceID()
     
-    -- 检查该应用是否有输入法偏好设置
-    local preference = config.appInputPreferences[appName]
+    -- 获取偏好设置,如果没有指定,则默认为 "english"
+    local preference = config.appInputPreferences[appName] or "english"
     
-    if preference then
-        helpers.log("App activated: " .. appName .. ", switching to: " .. preference)
-        
+    -- 如果设置为 "keep",则不执行任何操作
+    if preference == "keep" then
+        helpers.log("Activated: [" .. appName .. "] | Preference: keep | No switch")
+        return
+    end
+
+    local targetSourceID = config.inputSources[preference]
+    
+    if targetSourceID and currentSource ~= targetSourceID then
+        helpers.log("Activated: [" .. appName .. "] | Switch to " .. preference .. " (" .. targetSourceID .. ")")
         -- 延迟切换,确保应用完全激活
         hs.timer.doAfter(0.1, function()
-            helpers.switchToInputSource(preference)
+            hs.keycodes.currentSourceID(targetSourceID)
         end)
+    else
+        helpers.log("Activated: [" .. appName .. "] | Already in " .. preference)
     end
 end
 

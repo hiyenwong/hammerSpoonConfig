@@ -11,11 +11,13 @@ config.apps = {
     vscode = "Visual Studio Code",
     chrome = "Google Chrome",
     wechat = "WeChat",
-    wecom = "WeCom",
+    wecom = "企业微信",
     firefox = "Firefox",
     intellij = "IntelliJ IDEA",
     iterm = "iTerm",
     ghostty = "Ghostty"
+    -- 如果应用名无效,可以尝试使用 Bundle ID,例如:
+    -- wecom = "com.tencent.WWKApi"
 }
 
 -- ============================================
@@ -78,16 +80,25 @@ config.japaneseKeyboard = {
 }
 
 -- ============================================
--- 应用输入法偏好设置
+-- 应用输入法偏好设置 (默认自动切换为英文)
 -- ============================================
 config.appInputPreferences = {
-    ["Visual Studio Code"] = "english",
-    ["IntelliJ IDEA"] = "english",
+    -- 中文应用清单
+    ["微信"] = "chinese",
+    ["WeChat"] = "chinese",
+    ["企业微信"] = "chinese",
+    ["WeCom"] = "chinese",
     ["iTerm"] = "english",
     ["Ghostty"] = "english",
-    ["WeChat"] = "chinese",
-    ["WeCom"] = "chinese"
-    -- Chrome 和 Firefox 保持上次状态,不自动切换
+    ["Visual Studio Code"] = "english",
+    ["IntelliJ IDEA"] = "english",
+    
+    -- 保持原样(不自动切换)的应用
+    ["Google Chrome"] = "keep",
+    ["Firefox"] = "keep",
+    ["Safari"] = "keep"
+    
+    -- 其他所有应用 (Code, iTerm, Finder 等) 默认切换到 "english"
 }
 
 return config
