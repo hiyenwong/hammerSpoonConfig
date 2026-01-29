@@ -49,6 +49,7 @@ config.windowHotkeys = {
     rightHalf = {mods = {"cmd", "ctrl"}, key = "l"},
     fullScreen = {mods = {"cmd", "ctrl"}, key = "f"},
     center = {mods = {"cmd", "ctrl"}, key = "c"},
+    center80 = {mods = {"cmd", "ctrl"}, key = "m"},
     topHalf = {mods = {"cmd", "ctrl"}, key = "j"},
     bottomHalf = {mods = {"cmd", "ctrl"}, key = "k"}
 }

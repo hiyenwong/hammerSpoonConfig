@@ -67,6 +67,7 @@ config.japaneseKeyboard = {
 - `bottomHalf` - 下半屏
 - `fullScreen` - 全屏
 - `center` - 居中
+- `center80` - 居中 (80% 屏幕大小)
 
 ## 🚀 应用快速启动
 
@@ -91,6 +92,7 @@ config.japaneseKeyboard = {
 | `Cmd+Ctrl+K` | 下半屏 |
 | `Cmd+Ctrl+F` | 全屏 |
 | `Cmd+Ctrl+C` | 居中 |
+| `Cmd+Ctrl+M` | 剧中居中 (80%) |
 
 > **💡 提示**: 请在普通应用窗口(如 VSCode、Chrome、Finder)上测试窗口管理功能。Hammerspoon Console 窗口可能有特殊限制,无法被调整大小。
 

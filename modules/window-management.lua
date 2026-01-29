@@ -56,6 +56,21 @@ local function moveToCenter()
     end
 end
 
+-- 剧中大小 (80%)
+local function moveToCenter80()
+    local win = hs.window.focusedWindow()
+    if win then
+        local screen = win:screen()
+        local frame = screen:frame()
+        win:setFrame({
+            x = frame.x + frame.w * 0.1,
+            y = frame.y + frame.h * 0.1,
+            w = frame.w * 0.8,
+            h = frame.h * 0.8
+        })
+    end
+end
+
 -- 上半屏
 local function moveToTopHalf()
     local win = hs.window.focusedWindow()
@@ -94,6 +109,7 @@ local windowActions = {
     rightHalf = moveToRightHalf,
     fullScreen = moveToFullScreen,
     center = moveToCenter,
+    center80 = moveToCenter80,
     topHalf = moveToTopHalf,
     bottomHalf = moveToBottomHalf
 }
@@ -125,6 +141,7 @@ function module.init()
     hs.hotkey.bind(hotkeys.rightHalf.mods, hotkeys.rightHalf.key, moveToRightHalf)
     hs.hotkey.bind(hotkeys.fullScreen.mods, hotkeys.fullScreen.key, moveToFullScreen)
     hs.hotkey.bind(hotkeys.center.mods, hotkeys.center.key, moveToCenter)
+    hs.hotkey.bind(hotkeys.center80.mods, hotkeys.center80.key, moveToCenter80)
     hs.hotkey.bind(hotkeys.topHalf.mods, hotkeys.topHalf.key, moveToTopHalf)
     hs.hotkey.bind(hotkeys.bottomHalf.mods, hotkeys.bottomHalf.key, moveToBottomHalf)
     
