@@ -51,9 +51,14 @@ config.windowHotkeys = {
     rightHalf = {mods = {"cmd", "ctrl"}, key = "l"},
     fullScreen = {mods = {"cmd", "ctrl"}, key = "f"},
     center = {mods = {"cmd", "ctrl"}, key = "c"},
-    center80 = {mods = {"cmd", "ctrl"}, key = "m"},
+    center80 = {mods = {"cmd", "ctrl"}, key = "b"},
     topHalf = {mods = {"cmd", "ctrl"}, key = "j"},
-    bottomHalf = {mods = {"cmd", "ctrl"}, key = "k"}
+    bottomHalf = {mods = {"cmd", "ctrl"}, key = "k"},
+    -- 四个角落
+    topLeft = {mods = {"cmd", "ctrl"}, key = "u"},
+    topRight = {mods = {"cmd", "ctrl"}, key = "i"},
+    bottomLeft = {mods = {"cmd", "ctrl"}, key = "n"},
+    bottomRight = {mods = {"cmd", "ctrl"}, key = "m"}
 }
 
 -- ============================================
@@ -66,16 +71,16 @@ config.japaneseKeyboard = {
     -- 英数键映射配置(在英文/中文输入法下)
     eisuMapping = {
         enabled = true,
-        -- 可选映射类型: "hyper", "window", "app", "custom"
-        type = "window",  -- 默认映射为窗口管理
-        action = "leftHalf"  -- 左半屏
+        -- 可选映射类型: "hyper", "window", "app", "tab", "custom"
+        type = "tab",  -- 标签页切换
+        action = "previous"  -- 切换到上一个标签页
     },
     
     -- かな键映射配置(在英文/中文输入法下)
     kanaMapping = {
         enabled = true,
-        type = "window",  -- 默认映射为窗口管理
-        action = "rightHalf"  -- 右半屏
+        type = "tab",  -- 标签页切换
+        action = "next"  -- 切换到下一个标签页
     }
 }
 

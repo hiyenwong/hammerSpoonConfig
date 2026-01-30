@@ -101,6 +101,66 @@ local function moveToBottomHalf()
     end
 end
 
+-- 左上角 (四分之一屏幕)
+local function moveToTopLeft()
+    local win = hs.window.focusedWindow()
+    if win then
+        local screen = win:screen()
+        local frame = screen:frame()
+        win:setFrame({
+            x = frame.x,
+            y = frame.y,
+            w = frame.w / 2,
+            h = frame.h / 2
+        })
+    end
+end
+
+-- 右上角 (四分之一屏幕)
+local function moveToTopRight()
+    local win = hs.window.focusedWindow()
+    if win then
+        local screen = win:screen()
+        local frame = screen:frame()
+        win:setFrame({
+            x = frame.x + frame.w / 2,
+            y = frame.y,
+            w = frame.w / 2,
+            h = frame.h / 2
+        })
+    end
+end
+
+-- 左下角 (四分之一屏幕)
+local function moveToBottomLeft()
+    local win = hs.window.focusedWindow()
+    if win then
+        local screen = win:screen()
+        local frame = screen:frame()
+        win:setFrame({
+            x = frame.x,
+            y = frame.y + frame.h / 2,
+            w = frame.w / 2,
+            h = frame.h / 2
+        })
+    end
+end
+
+-- 右下角 (四分之一屏幕)
+local function moveToBottomRight()
+    local win = hs.window.focusedWindow()
+    if win then
+        local screen = win:screen()
+        local frame = screen:frame()
+        win:setFrame({
+            x = frame.x + frame.w / 2,
+            y = frame.y + frame.h / 2,
+            w = frame.w / 2,
+            h = frame.h / 2
+        })
+    end
+end
+
 -- ============================================
 -- 窗口操作映射表
 -- ============================================
@@ -111,7 +171,11 @@ local windowActions = {
     center = moveToCenter,
     center80 = moveToCenter80,
     topHalf = moveToTopHalf,
-    bottomHalf = moveToBottomHalf
+    bottomHalf = moveToBottomHalf,
+    topLeft = moveToTopLeft,
+    topRight = moveToTopRight,
+    bottomLeft = moveToBottomLeft,
+    bottomRight = moveToBottomRight
 }
 
 -- ============================================
@@ -144,6 +208,10 @@ function module.init()
     hs.hotkey.bind(hotkeys.center80.mods, hotkeys.center80.key, moveToCenter80)
     hs.hotkey.bind(hotkeys.topHalf.mods, hotkeys.topHalf.key, moveToTopHalf)
     hs.hotkey.bind(hotkeys.bottomHalf.mods, hotkeys.bottomHalf.key, moveToBottomHalf)
+    hs.hotkey.bind(hotkeys.topLeft.mods, hotkeys.topLeft.key, moveToTopLeft)
+    hs.hotkey.bind(hotkeys.topRight.mods, hotkeys.topRight.key, moveToTopRight)
+    hs.hotkey.bind(hotkeys.bottomLeft.mods, hotkeys.bottomLeft.key, moveToBottomLeft)
+    hs.hotkey.bind(hotkeys.bottomRight.mods, hotkeys.bottomRight.key, moveToBottomRight)
     
     helpers.log("Window management initialized")
 end

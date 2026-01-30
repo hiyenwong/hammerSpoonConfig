@@ -30,6 +30,20 @@ local function handleEisuKey()
     if mapping.type == "window" then
         windowMgmt.executeAction(mapping.action)
         return true
+    elseif mapping.type == "tab" then
+        -- 标签页切换 - 使用更可靠的按键模拟方式
+        if mapping.action == "previous" then
+            -- 切换到上一个标签页 (Cmd+Shift+[)
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "[", true):post()
+            hs.timer.usleep(10000) -- 10ms 延迟
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "[", false):post()
+        elseif mapping.action == "next" then
+            -- 切换到下一个标签页 (Cmd+Shift+])
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "]", true):post()
+            hs.timer.usleep(10000) -- 10ms 延迟
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "]", false):post()
+        end
+        return true
     elseif mapping.type == "hyper" then
         -- Hyper 键实现(Cmd+Ctrl+Alt+Shift)
         -- 这里可以触发其他自定义操作
@@ -70,6 +84,20 @@ local function handleKanaKey()
     -- 根据映射类型执行相应操作
     if mapping.type == "window" then
         windowMgmt.executeAction(mapping.action)
+        return true
+    elseif mapping.type == "tab" then
+        -- 标签页切换 - 使用更可靠的按键模拟方式
+        if mapping.action == "previous" then
+            -- 切换到上一个标签页 (Cmd+Shift+[)
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "[", true):post()
+            hs.timer.usleep(10000) -- 10ms 延迟
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "[", false):post()
+        elseif mapping.action == "next" then
+            -- 切换到下一个标签页 (Cmd+Shift+])
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "]", true):post()
+            hs.timer.usleep(10000) -- 10ms 延迟
+            hs.eventtap.event.newKeyEvent({"cmd", "shift"}, "]", false):post()
+        end
         return true
     elseif mapping.type == "hyper" then
         helpers.showAlert("Hyper Key (Kana)")
