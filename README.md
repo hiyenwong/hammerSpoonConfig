@@ -15,8 +15,8 @@
 
 ### ⌨️ 日语键盘重映射
 在 **英文或中文** 输入法下：
-- **「英数」键** → 窗口移至左半屏
-- **「かな」键** → 窗口移至右半屏
+- **「英数」键** → 切换到上一个标签页 (Cmd+Shift+[)
+- **「かな」键** → 切换到下一个标签页 (Cmd+Shift+])
 - 切换到 **日语输入法** 时，按键恢复原始功能。
 
 ### 🚀 应用快速启动
@@ -28,8 +28,20 @@
 - **保持原样**: 浏览器 (Chrome, Safari, Firefox) 保持上次状态。
 
 ### 🪟 窗口管理
-- `Cmd+Ctrl + H/L/J/K`: 左/右/上/下半屏
-- `Cmd+Ctrl + F/C/M`: 全屏/居中/居中(80%)
+#### 半屏布局
+- `Cmd+Ctrl + H/L`: 左/右半屏
+- `Cmd+Ctrl + J/K`: 上/下半屏
+
+#### 四角布局 (四分之一屏幕)
+- `Cmd+Ctrl + U`: 左上角
+- `Cmd+Ctrl + I`: 右上角
+- `Cmd+Ctrl + N`: 左下角
+- `Cmd+Ctrl + M`: 右下角
+
+#### 全屏和居中
+- `Cmd+Ctrl + F`: 全屏
+- `Cmd+Ctrl + C`: 居中 (保持窗口大小)
+- `Cmd+Ctrl + B`: 居中 80% (缩小并居中)
 
 ---
 
@@ -44,8 +56,8 @@
 
 ### ⌨️ Japanese Keyboard Remapping
 When using **English or Chinese** input sources:
-- **"Eisu" (英数) Key** → Move window to Left Half
-- **"Kana" (かな) Key** → Move window to Right Half
+- **"Eisu" (英数) Key** → Switch to Previous Tab (Cmd+Shift+[)
+- **"Kana" (かな) Key** → Switch to Next Tab (Cmd+Shift+])
 - Reverts to original functions when switched to **Japanese input source**.
 
 ### 🚀 App Launcher
@@ -57,8 +69,20 @@ When using **English or Chinese** input sources:
 - **Keep State**: Browsers (Chrome, Safari, Firefox) will maintain their current input state.
 
 ### 🪟 Window Management
-- `Cmd+Ctrl + H/L/J/K`: Left/Right/Top/Bottom Half
-- `Cmd+Ctrl + F/C/M`: Fullscreen/Center/Center(80%)
+#### Half Screen Layouts
+- `Cmd+Ctrl + H/L`: Left/Right Half
+- `Cmd+Ctrl + J/K`: Top/Bottom Half
+
+#### Quarter Screen Layouts (Four Corners)
+- `Cmd+Ctrl + U`: Top-Left Corner
+- `Cmd+Ctrl + I`: Top-Right Corner
+- `Cmd+Ctrl + N`: Bottom-Left Corner
+- `Cmd+Ctrl + M`: Bottom-Right Corner
+
+#### Fullscreen and Centering
+- `Cmd+Ctrl + F`: Fullscreen
+- `Cmd+Ctrl + C`: Center (keep window size)
+- `Cmd+Ctrl + B`: Center 80% (resize and center)
 
 ---
 
@@ -73,8 +97,8 @@ When using **English or Chinese** input sources:
 
 ### ⌨️ 日本語キーボードの再配置
 **英語または中国語** 入力ソースを使用している場合：
-- **「英数」キー** → ウィンドウを左半分に移動
-- **「かな」キー** → ウィンドウを右半分に移動
+- **「英数」キー** → 前のタブに切り替え (Cmd+Shift+[)
+- **「かな」キー** → 次のタブに切り替え (Cmd+Shift+])
 - **日本語入力** に切り替えると、キーは元の機能に戻ります。
 
 ### 🚀 アプリランチャー
@@ -86,5 +110,17 @@ When using **English or Chinese** input sources:
 - **状態保持**: ブラウザ (Chrome, Safari, Firefox) は現在の入力状態を維持します。
 
 ### 🪟 ウィンドウ管理
-- `Cmd+Ctrl + H/L/J/K`: 左/右/上/下半分
-- `Cmd+Ctrl + F/C/M`: フルスクリーン/中央/中央(80%)
+#### 半画面レイアウト
+- `Cmd+Ctrl + H/L`: 左/右半分
+- `Cmd+Ctrl + J/K`: 上/下半分
+
+#### 四隅レイアウト (画面の4分の1)
+- `Cmd+Ctrl + U`: 左上隅
+- `Cmd+Ctrl + I`: 右上隅
+- `Cmd+Ctrl + N`: 左下隅
+- `Cmd+Ctrl + M`: 右下隅
+
+#### フルスクリーンと中央配置
+- `Cmd+Ctrl + F`: フルスクリーン
+- `Cmd+Ctrl + C`: 中央 (ウィンドウサイズを維持)
+- `Cmd+Ctrl + B`: 80%で中央配置 (リサイズして中央に)
