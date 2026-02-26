@@ -97,10 +97,9 @@ config.appInputPreferences = {
     ["Ghostty"] = "english",
     ["Visual Studio Code"] = "english",
     ["IntelliJ IDEA"] = "english",
-    
+    ["Firefox"] = "english",
+    ["Google Chrome"] = "english",
     -- 保持原样(不自动切换)的应用
-    ["Google Chrome"] = "keep",
-    ["Firefox"] = "keep",
     ["Safari"] = "keep"
     
     -- 其他所有应用 (Code, iTerm, Finder 等) 默认切换到 "english"
